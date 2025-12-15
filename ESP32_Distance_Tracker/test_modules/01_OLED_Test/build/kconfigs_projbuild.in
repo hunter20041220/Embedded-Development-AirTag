@@ -1,0 +1,6 @@
+source "D:/progress/esp/esp-idf/v5.5.1/esp-idf/components/bootloader/Kconfig.projbuild"
+source "D:/progress/esp/esp-idf/v5.5.1/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "D:/progress/esp/esp-idf/v5.5.1/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "D:/progress/esp/esp-idf/v5.5.1/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "D:/progress/esp/esp-idf/v5.5.1/esp-idf/components/partition_table/Kconfig.projbuild"
+source "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/managed_components/ssd1306/Kconfig.projbuild"

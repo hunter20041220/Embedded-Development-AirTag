@@ -1,0 +1,9 @@
+
+
+# Load bootloader symbols
+set confirm off
+    # Bootloader elf was not found
+set confirm on
+
+# Load application symbols
+file D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/build/bootloader/bootloader.elf
