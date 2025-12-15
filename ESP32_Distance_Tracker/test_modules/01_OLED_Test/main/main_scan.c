@@ -10,8 +10,9 @@
 
 #define TAG "I2C_SCAN"
 
-#define SDA_GPIO  21
-#define SCL_GPIO  22
+// 交换引脚试试
+#define SDA_GPIO  22
+#define SCL_GPIO  21
 
 void app_main(void)
 {

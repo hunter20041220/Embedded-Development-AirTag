@@ -1,0 +1,17 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=D:\progress\esp\espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 D:\progress\code\Embedded-Development-AirTag\ESP32_Distance_Tracker\test_modules\00_Full_Test
+CMake Error at D:/progress/esp/esp-idf/v5.5.1/esp-idf/tools/cmake/build.cmake:629 (message):
+  ERROR: 'git fetch origin' failed with exit code 128
+
+  fatal: unable to access
+  'https://github.com/nopnop2002/esp-idf-ssd1306.git/': Recv failure:
+  Connection was reset
+
+
+
+
+
+Call Stack (most recent call first):
+  D:/progress/esp/esp-idf/v5.5.1/esp-idf/tools/cmake/project.cmake:740 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+

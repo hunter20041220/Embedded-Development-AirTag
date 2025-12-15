@@ -1,0 +1,2 @@
+source D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader/gdbinit/symbols
+source D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader/gdbinit/connect

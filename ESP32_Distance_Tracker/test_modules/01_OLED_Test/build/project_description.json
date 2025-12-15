@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "oled_test",
-    "project_version":    "875c661-dirty",
+    "project_version":    "d5117c0-dirty",
     "project_path":       "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test",
     "idf_path":           "D:/progress/esp/esp-idf/v5.5.1/esp-idf",
     "build_dir":          "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/build",
@@ -1220,12 +1220,12 @@
             "dir": "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "driver", "ssd1306" ],
-            "priv_reqs": [ "spi_flash", "ssd1306" ],
+            "reqs": [ "driver" ],
+            "priv_reqs": [ "ssd1306" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "ssd1306" ],
             "file": "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/main/main.c" ],
+            "sources": [ "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/main/main_scan.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2922,8 +2922,8 @@
             "prefix": "idf",
             "dir": "D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/01_OLED_Test/main",
             "lib": "__idf_main",
-            "reqs": [ "driver", "ssd1306" ],
-            "priv_reqs": [ "spi_flash", "ssd1306" ],
+            "reqs": [ "driver" ],
+            "priv_reqs": [ "ssd1306" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "ssd1306" ],
             "include_dirs": [ "." ]

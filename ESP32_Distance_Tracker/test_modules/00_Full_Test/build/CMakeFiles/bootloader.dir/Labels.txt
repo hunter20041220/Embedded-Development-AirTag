@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/CMakeFiles/bootloader
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/CMakeFiles/bootloader.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/CMakeFiles/bootloader-complete.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/progress/code/Embedded-Development-AirTag/ESP32_Distance_Tracker/test_modules/00_Full_Test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
