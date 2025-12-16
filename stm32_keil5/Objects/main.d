@@ -10,4 +10,4 @@
   Lib\stm32f10x_iwdg.h Lib\stm32f10x_pwr.h Lib\stm32f10x_rcc.h \
   Lib\stm32f10x_rtc.h Lib\stm32f10x_sdio.h Lib\stm32f10x_spi.h \
   Lib\stm32f10x_tim.h Lib\stm32f10x_usart.h Lib\stm32f10x_wwdg.h \
-  Lib\misc.h OLED.h
+  Lib\misc.h OLED.h RC522.h Delay.h

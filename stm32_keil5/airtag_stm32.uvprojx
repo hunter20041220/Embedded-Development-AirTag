@@ -382,7 +382,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>App</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
@@ -392,7 +392,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Hardware</GroupName>
+          <GroupName>OLED</GroupName>
           <Files>
             <File>
               <FileName>OLED.c</FileName>
@@ -518,6 +518,176 @@
               <FileName>stm32f10x_wwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\stm32f10x_wwdg.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DHT22</GroupName>
+          <Files>
+            <File>
+              <FileName>DHT22.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DHT22.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>RC522</GroupName>
+          <Files>
+            <File>
+              <FileName>RC522.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RC522.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MPU6050</GroupName>
+          <Files>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MPU6050.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HCSR04</GroupName>
+          <Files>
+            <File>
+              <FileName>HCSR04.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HCSR04.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Buzzer</GroupName>
+          <Files>
+            <File>
+              <FileName>Buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Buzzer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LED</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LED.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HW269</GroupName>
+          <Files>
+            <File>
+              <FileName>HW269.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HW269.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Delay</GroupName>
+          <Files>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Delay.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\I2C.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SPI</GroupName>
+          <Files>
+            <File>
+              <FileName>SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SPI.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>USART</GroupName>
+          <Files>
+            <File>
+              <FileName>USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USART.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tests</GroupName>
+          <Files>
+            <File>
+              <FileName>test_buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_dht22.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_dht22.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_hcsr04.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_hcsr04.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_hw269.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_hw269.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_mpu6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_oled.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_rc522.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test_rc522.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BH1750</GroupName>
+          <Files>
+            <File>
+              <FileName>BH1750.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BH1750.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HCSR501</GroupName>
+          <Files>
+            <File>
+              <FileName>HCSR501.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HCSR501.c</FilePath>
             </File>
           </Files>
         </Group>

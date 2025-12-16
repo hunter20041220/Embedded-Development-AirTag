@@ -25,11 +25,14 @@
 | 7 | **LED** | PWM/GPIO | PA15 | GPIO | 状态指示灯 |
 | 8 | **HW-269** | ADC | PA0 | ADC1_IN0 | 电池电量检测 |
 | 9 | **串口调试** | USART1 | PA9(TX), PA10(RX) | USART1 | USB转串口 |
+| 10 | **BH1750** | I2C | PB6(SCL), PB7(SDA) | - | 光照强度传感器 (可与OLED共享I2C) |
+| 11 | **HCSR501 (PIR)** | GPIO/IRQ | PB11(OUT) | EXTI11 | 被动红外运动传感器 |
 
 ### 引脚资源占用统计
 
 - **GPIOA**: PA0(ADC), PA3(RST), PA4(CS), PA5-PA7(SPI1), PA8(PWM), PA9-PA10(USART1), PA15(LED)
 - **GPIOB**: PB0-PB1(SR04), PB6-PB7(OLED I2C), PB8-PB9(MPU6050 I2C1)
+ - **GPIOB**: PB0-PB1(HC-SR04), PB6-PB7(OLED/BH1750 I2C), PB8-PB9(MPU6050 I2C1), PB11(HCSR501 OUT)
 - **GPIOC**: PC13(DHT22)
 
 ---
@@ -306,35 +309,129 @@ distance_cm = pulse_width_us * 0.017;
 
 ---
 
-### 6. 蜂鸣器 (PWM控制)
+### BH1750 光照强度传感器 (I2C)
 
 **模块规格**：
-- 类型：无源蜂鸣器 (需要PWM驱动)
-- 频率：2-5kHz (典型2.7kHz)
-- 接口：GPIO (1针)
-- 电压：3.3V-5V
+- 接口：I2C
+- 测量范围：0 ~ 65535 lx (16-bit)
+- I2C地址：0x23 (默认) / 0x5C (ADDR引脚拉高时，具体请参考模块数据表)
+- 电压：3.3V - 5V（优先使用3.3V）
+
+**接线表**：
+
+| BH1750引脚 | STM32引脚 | 引脚功能 | 说明 |
+|-----------|----------|----------|------|
+| VCC | 3.3V | 电源 | 供电 |
+| GND | GND | 地 | 接地 |
+| SCL | **PB6** | I2C时钟 | 与OLED共用I2C时钟线（软件I2C或硬件I2C视情况） |
+| SDA | **PB7** | I2C数据 | 与OLED共用I2C数据线 |
+| ADDR | GND/VCC | 地址选择 | 可选，接GND为0x23，接VCC为另一个地址 |
+
+**接线示意图**：
+```
+BH1750               STM32F103
+┌──────────┐         ┌──────┐
+│ VCC      │────────►│ 3.3V │
+│ GND      │────────►│ GND  │
+│ SCL      │◄───────►│ PB6  │ I2C时钟 (与OLED共享)
+│ SDA      │◄───────►│ PB7  │ I2C数据 (与OLED共享)
+│ ADDR     │────────►│ GND/VCC │ 地址选择
+└──────────┘         └──────┘
+```
+
+**代码/硬件注意**：
+- 如果OLED已使用软件I2C (PB6/PB7)，BH1750可以直接共享同一总线，注意不同I2C设备地址。
+- 确保I2C总线有上拉电阻（通常4.7k），模块若内置则无需外接。
+- 常用读数流程：PowerOn -> Reset -> 读取测量寄存器（16位），转换为lx。
+
+---
+
+### HCSR501 被动红外运动传感器 (PIR) (GPIO / 中断)
+
+**模块规格**：
+- 类型：被动红外传感器模块
+- 接口：数字输出 (OUT)
+- 电压：3.3V - 5V（依据模块规格）
+
+**接线表**：
+
+| HCSR501引脚 | STM32引脚 | 引脚功能 | 说明 |
+|------------|----------|----------|------|
+| VCC | 3.3V 或 5V | 电源 | 供电（以模块规格为准） |
+| GND | GND | 地 | 接地 |
+| OUT | **PB11** | 数字输出 / 外部中断 | 高电平表示检测到运动，建议使用EXTI中断检测 |
+
+**接线示意图**：
+```
+HCSR501              STM32F103
+┌──────────┐         ┌──────┐
+│ VCC      │────────►│ 3.3V │ (或5V，参照模块)
+│ GND      │────────►│ GND  │
+│ OUT      │────────►│ PB11 │ 数字输入 (可配置为 EXTI11)
+└──────────┘         └──────┘
+```
+
+**代码配置建议**：
+- 将 `PB11` 配置为输入并启用外部中断（EXTI11），以实现低延迟检测：
+  - 输入模式：`GPIO_Mode_IN_FLOATING` 或 `GPIO_Mode_IPD/ IPU`（根据模块输出电平）
+  - 配置 `EXTI_Line11` 和 NVIC 中断优先级以处理触发事件
+- 注意模块上通常有灵敏度和延时可调电位器，先用短延时和高灵敏度测试，必要时调整。
+- 输出为脉冲/高电平时表示检测到运动，长时间高电平说明持续检测到活动。
+
+
+### 6. 蜂鸣器 (有源/无源两种)
+
+**模块规格**：
+- 类型：有源蜂鸣器 (默认) 或 无源蜂鸣器
+- 接口：3针 (VCC, I/O, GND)
+- 电压：3.3V-5V (根据蜂鸣器规格)
+- 驱动方式：
+  - **有源蜂鸣器**：高电平直接响 (GPIO控制)
+  - **无源蜂鸣器**：需要PWM驱动 (2-5kHz，典型2.7kHz)
 
 **接线表**：
 
 | 蜂鸣器引脚 | STM32引脚 | 引脚功能 | 说明 |
 |-----------|----------|----------|------|
-| I/O (+) | **PA8** | TIM1_CH1 PWM | PWM输出 |
-| GND (-) | GND | 地 | 接地 |
+| VCC | 3.3V 或 5V | 电源 | 供电 (根据蜂鸣器规格选择) |
+| I/O | **PA8** | GPIO/TIM1_CH1 | 控制引脚 (有源用GPIO，无源用PWM) |
+| GND | GND | 地 | 接地 |
 
 **接线示意图**：
 ```
 蜂鸣器               STM32F103
 ┌──────────┐         ┌──────┐
-│ I/O (+)  │◄────────│ PA8  │ TIM1_CH1 PWM输出
-│ GND (-)  │────────►│ GND  │
+│ VCC      │────────►│ 5V   │ (或3.3V，看蜂鸣器规格)
+│ I/O      │◄────────│ PA8  │ 有源：GPIO推挽输出
+│ GND      │────────►│ GND  │ 无源：TIM1_CH1 PWM
 └──────────┘         └──────┘
 ```
 
 **代码配置** (Hardware/Buzzer/Buzzer.c)：
-```c
-// PA8配置为TIM1_CH1 PWM输出
-RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1 | RCC_APB2Periph_GPIOA, ENABLE);
 
+**方式1: 有源蜂鸣器 (默认，推荐测试)**
+```c
+// Buzzer.h 中设置：
+#define BUZZER_TYPE  BUZZER_TYPE_ACTIVE  // 有源蜂鸣器
+
+// PA8配置为推挽输出
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+
+// 控制函数
+Buzzer_On();   // 高电平，响
+Buzzer_Off();  // 低电平，停
+Buzzer_Beep(200);  // 响200ms后自动停
+Buzzer_BeepTimes(3, 200);  // 响3次，每次200ms
+```
+
+**方式2: 无源蜂鸣器 (需要PWM)**
+```c
+// Buzzer.h 中设置：
+#define BUZZER_TYPE  BUZZER_TYPE_PASSIVE  // 无源蜂鸣器
+
+// PA8配置为TIM1_CH1 PWM输出
 GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // 复用推挽
 GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
@@ -344,12 +441,28 @@ TIM_TimeBaseStructure.TIM_Period = 999; // ARR
 TIM_TimeBaseStructure.TIM_Prescaler = 26; // 72MHz/(26+1)/1000 = 2.67kHz
 TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
 TIM_OCInitStructure.TIM_Pulse = 500; // 占空比50%
+
+// 控制函数
+Buzzer_On();   // 启动PWM
+Buzzer_Off();  // 停止PWM
 ```
 
+**如何判断蜂鸣器类型**：
+- **有源蜂鸣器**：
+  - 底部有电路板或元件
+  - 直接接3.3V/5V和GND会响
+  - 只需高低电平控制
+  
+- **无源蜂鸣器**：
+  - 底部只有一个振动膜
+  - 直接接电源不会响
+  - 需要PWM驱动 (2-5kHz方波)
+
 **注意事项**：
-- ⚠️ 无源蜂鸣器需要PWM驱动 (2-5kHz)
-- ⚠️ 有源蜂鸣器只需高电平 (不需要PWM)
+- ⚠️ **先用有源模式测试**，如果不响再改成无源模式
 - ⚠️ 电流较大时建议加三极管驱动
+- ⚠️ 确认VCC引脚电压 (3.3V或5V，看蜂鸣器规格贴纸)
+- ⚠️ 无源蜂鸣器频率不对声音会很小或不响
 
 ---
 

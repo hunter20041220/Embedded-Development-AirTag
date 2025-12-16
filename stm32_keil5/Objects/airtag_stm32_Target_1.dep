@@ -1,6 +1,6 @@
 Dependencies for Project 'airtag_stm32', Target 'Target_1': (DO NOT MODIFY !)
 CompilerVersion: 6240000::V6.24::ARMCLANG
-F (.\main.c)(0x693FEC63)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/main.o -MMD)
+F (.\main.c)(0x6940218F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/main.o -MMD)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
 I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
@@ -29,7 +29,9 @@ I (Lib\stm32f10x_usart.h)(0x61605445)
 I (Lib\stm32f10x_wwdg.h)(0x61605445)
 I (Lib\misc.h)(0x61605445)
 I (OLED.h)(0x693FEC63)
-F (.\OLED.c)(0x693FEC63)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/oled.o -MMD)
+I (RC522.h)(0x6940218F)
+I (Delay.h)(0x693FF750)
+F (.\OLED.c)(0x694018CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/oled.o -MMD)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
 I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
@@ -701,6 +703,284 @@ I (Lib\stm32f10x_sdio.h)(0x61605445)
 I (Lib\stm32f10x_spi.h)(0x61605445)
 I (Lib\stm32f10x_tim.h)(0x61605445)
 I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+F (.\DHT22.c)(0x69400677)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/dht22.o -MMD)
+I (DHT22.h)(0x694001A4)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+I (Delay.h)(0x693FF750)
+F (.\RC522.c)(0x6940218F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/rc522.o -MMD)
+I (RC522.h)(0x6940218F)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+I (Delay.h)(0x693FF750)
+F (.\MPU6050.c)(0x69400D9D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/mpu6050.o -MMD)
+I (MPU6050.h)(0x69400C35)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+I (Delay.h)(0x693FF750)
+F (.\HCSR04.c)(0x693FFD76)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/hcsr04.o -MMD)
+I (HCSR04.h)(0x693FFB6E)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+I (Delay.h)(0x693FF750)
+F (.\Buzzer.c)(0x693FFA1E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/buzzer.o -MMD)
+I (Buzzer.h)(0x693FFA1E)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+I (Delay.h)(0x693FF750)
+F (.\LED.c)(0x693FF8DB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/led.o -MMD)
+I (LED.h)(0x693FF750)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+F (.\HW269.c)(0x693FF153)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/hw269.o -MMD)
+F (.\Delay.c)(0x693FFD76)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/delay.o -MMD)
+I (Delay.h)(0x693FF750)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+F (.\I2C.c)(0x693FF4F1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/i2c.o -MMD)
+F (.\SPI.c)(0x693FF511)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/spi.o -MMD)
+F (.\USART.c)(0x693FF53D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/usart.o -MMD)
+F (.\test_buzzer.c)(0x693FF1E7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_buzzer.o -MMD)
+F (.\test_dht22.c)(0x69400998)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_dht22.o -MMD)
+F (.\test_hcsr04.c)(0x693FF1DB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_hcsr04.o -MMD)
+F (.\test_hw269.c)(0x693FF208)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_hw269.o -MMD)
+F (.\test_mpu6050.c)(0x693FF1CB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_mpu6050.o -MMD)
+F (.\test_oled.c)(0x693FF199)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_oled.o -MMD)
+F (.\test_rc522.c)(0x693FF1BB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/test_rc522.o -MMD)
+F (.\BH1750.c)(0x69401441)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/bh1750.o -MMD)
+I (BH1750.h)(0x694013CE)
+I (Delay.h)(0x693FF750)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
+I (Lib\misc.h)(0x61605445)
+F (.\HCSR501.c)(0x69401C79)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/hcsr501.o -MMD)
+I (HCSR501.h)(0x69401C79)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
+I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
+I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
+I (..\stm32_keil5\stm32f10x_conf.h)(0x61605441)
+I (Lib\stm32f10x_adc.h)(0x61605445)
+I (Lib\stm32f10x_bkp.h)(0x61605445)
+I (Lib\stm32f10x_can.h)(0x61605445)
+I (Lib\stm32f10x_cec.h)(0x61605445)
+I (Lib\stm32f10x_crc.h)(0x61605445)
+I (Lib\stm32f10x_dac.h)(0x61605445)
+I (Lib\stm32f10x_dbgmcu.h)(0x61605445)
+I (Lib\stm32f10x_dma.h)(0x61605445)
+I (Lib\stm32f10x_exti.h)(0x61605445)
+I (Lib\stm32f10x_flash.h)(0x61605445)
+I (Lib\stm32f10x_fsmc.h)(0x61605445)
+I (Lib\stm32f10x_gpio.h)(0x61605445)
+I (Lib\stm32f10x_i2c.h)(0x61605445)
+I (Lib\stm32f10x_iwdg.h)(0x61605445)
+I (Lib\stm32f10x_pwr.h)(0x61605445)
+I (Lib\stm32f10x_rcc.h)(0x61605445)
+I (Lib\stm32f10x_rtc.h)(0x61605445)
+I (Lib\stm32f10x_sdio.h)(0x61605445)
+I (Lib\stm32f10x_spi.h)(0x61605445)
+I (Lib\stm32f10x_tim.h)(0x61605445)
+I (Lib\stm32f10x_usart.h)(0x61605445)
+I (Lib\stm32f10x_wwdg.h)(0x61605445)
 I (Lib\misc.h)(0x61605445)
 F (RTE/Device/STM32F103C8/RTE_Device.h)(0x693FD39F)()
 F (RTE/Device/STM32F103C8/startup_stm32f10x_md.s)(0x693FD39F)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 543" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
