@@ -19,4 +19,7 @@ void Buzzer_Toggle(void);   // 翻转状态
 void Buzzer_Beep(uint16_t ms);           // 响ms毫秒后自动停止
 void Buzzer_BeepTimes(uint8_t times, uint16_t duration); // 响n次，每次duration毫秒
 
+// 音乐播放（适用于无源蜂鸣器）
+void Buzzer_PlaySeeYouAgain(void);  // 播放See You Again旋律片段
+
 #endif

@@ -64,7 +64,17 @@ void Buzzer_BeepTimes(uint8_t times, uint16_t duration)
             Delay_ms(duration);
     }
 }
-
+// ========== 音乐播放功能 ==========
+// 有源蜂鸣器无法播放旋律，使用简单的beep代替
+void Buzzer_PlaySeeYouAgain(void)
+{
+    // 用节奏模拟旋律
+    Buzzer_BeepTimes(3, 200);  // 三声短响
+    Delay_ms(300);
+    Buzzer_BeepTimes(2, 400);  // 两声长响
+    Delay_ms(300);
+    Buzzer_BeepTimes(3, 200);  // 三声短响
+}
 #elif BUZZER_TYPE == BUZZER_TYPE_PASSIVE
 // ========== 无源蜂鸣器模式 (PWM控制) ==========
 
@@ -144,5 +154,94 @@ void Buzzer_BeepTimes(uint8_t times, uint16_t duration)
             Delay_ms(duration);
     }
 }
+
+// ========== 音乐播放功能（通用） ==========
+
+#if BUZZER_TYPE == BUZZER_TYPE_PASSIVE
+// 音符频率定义 (Hz)
+#define NOTE_C4  262
+#define NOTE_D4  294
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_G4  392
+#define NOTE_A4  440
+#define NOTE_B4  494
+#define NOTE_C5  523
+#define NOTE_D5  587
+#define NOTE_E5  659
+#define NOTE_F5  698
+#define NOTE_G5  784
+
+// 设置蜂鸣器频率
+static void Buzzer_SetFrequency(uint16_t freq)
+{
+    uint16_t period;
+    if (freq == 0) {
+        TIM_Cmd(TIM1, DISABLE);
+        return;
+    }
+    
+    // 计算ARR值: 72MHz / (预分频+1) / (ARR+1) = 目标频率
+    // 使用预分频72，则计数频率为1MHz
+    period = 1000000 / freq - 1;
+    
+    TIM_SetAutoreload(TIM1, period);
+    TIM_SetCompare1(TIM1, period / 2);  // 50%占空比
+    TIM_Cmd(TIM1, ENABLE);
+}
+
+// 播放See You Again旋律片段
+void Buzzer_PlaySeeYouAgain(void)
+{
+    // See You Again主旋律片段 (简化版)
+    // 节奏: 1 = 四分音符(500ms), 0.5 = 八分音符(250ms), 2 = 二分音符(1000ms)
+    
+    typedef struct {
+        uint16_t freq;      // 音符频率
+        uint16_t duration;  // 持续时间(ms)
+    } Note;
+    
+    Note melody[] = {
+        {NOTE_G4, 500},  // It's been a
+        {NOTE_G4, 250},  // long
+        {NOTE_A4, 250},  // day
+        {NOTE_G4, 500},  // with-
+        {NOTE_E4, 500},  // out
+        {NOTE_D4, 500},  // you
+        {NOTE_C4, 1000}, // friend
+        {0, 200},        // 休止
+        
+        {NOTE_G4, 500},  // And I'll
+        {NOTE_G4, 250},  // tell
+        {NOTE_A4, 250},  // you
+        {NOTE_G4, 500},  // all
+        {NOTE_E4, 500},  // a-
+        {NOTE_D4, 500},  // bout
+        {NOTE_E4, 1000}, // it
+        {0, 200},        // 休止
+        
+        {NOTE_G4, 500},  // When I
+        {NOTE_A4, 500},  // see
+        {NOTE_G4, 500},  // you
+        {NOTE_E4, 500},  // a-
+        {NOTE_D4, 1500}, // gain
+        {0, 0}           // 结束
+    };
+    
+    uint8_t i = 0;
+    while (melody[i].freq != 0 || melody[i].duration != 0)
+    {
+        if (melody[i].freq == 0) {
+            // 休止符
+            TIM_Cmd(TIM1, DISABLE);
+  
+    // 用节奏模拟旋律
+    Buzzer_BeepTimes(3, 200);  // 三声短响
+    Delay_ms(300);
+    Buzzer_BeepTimes(2, 400);  // 两声长响
+    Delay_ms(300);
+    Buzzer_BeepTimes(3, 200);  // 三声短响
+}
+#endif
 
 #endif

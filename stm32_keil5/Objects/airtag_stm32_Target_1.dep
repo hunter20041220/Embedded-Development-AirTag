@@ -1,6 +1,6 @@
 Dependencies for Project 'airtag_stm32', Target 'Target_1': (DO NOT MODIFY !)
 CompilerVersion: 6240000::V6.24::ARMCLANG
-F (.\main.c)(0x6940F274)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/main.o -MMD)
+F (.\main.c)(0x69429A88)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/main.o -MMD)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
 I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
@@ -34,7 +34,7 @@ I (BH1750.h)(0x694013CE)
 I (MPU6050.h)(0x69400C35)
 I (HCSR04.h)(0x693FFB6E)
 I (LED.h)(0x693FF750)
-I (Buzzer.h)(0x693FFA1E)
+I (Buzzer.h)(0x69429230)
 I (Delay.h)(0x693FF750)
 F (.\OLED.c)(0x694018CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/oled.o -MMD)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
@@ -829,8 +829,8 @@ I (Lib\stm32f10x_usart.h)(0x61605445)
 I (Lib\stm32f10x_wwdg.h)(0x61605445)
 I (Lib\misc.h)(0x61605445)
 I (Delay.h)(0x693FF750)
-F (.\Buzzer.c)(0x693FFA1E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/buzzer.o -MMD)
-I (Buzzer.h)(0x693FFA1E)
+F (.\Buzzer.c)(0x69429293)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Lib -I ../stm32_keil5-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-ID:/progress/keil-mdk-arm/packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-ID:/progress/keil-mdk-arm/packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="543" -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/buzzer.o -MMD)
+I (Buzzer.h)(0x69429230)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x693FD39F)
 I (D:\progress\keil-mdk-arm\packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm3.h)(0x693FCD24)
 I (D:\progress\keil-mdk-arm\packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x693FD39F)
